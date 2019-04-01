@@ -1,0 +1,11 @@
+<!--Génération de l'élement -->
+
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': loveIts > dontLoveIts ,
+                'list-group-item-danger': dontLoveIts > loveIts}">
+    <p class="float-right font-italic"> {{date | date:'short'}}</p>
+    <h3>{{postTitle}} </h3>
+    <p class="text-justify">{{postContent}}</p>
+    <button class="btn btn-success" (click)="likefn()"> Like it! {{loveIts}}  </button>
+    <button class=" ml-2 btn btn-danger" (click)="dislikefn()"> Dislike it! {{dontLoveIts}}</button>
+</li>

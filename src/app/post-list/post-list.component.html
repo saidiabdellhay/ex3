@@ -1,0 +1,7 @@
+<!-- Génération des postes à partir de *ngFor -->
+      <ul class="list-group">
+        <app-post-list-item *ngFor="let post of postLists"
+                            [postTitle]="post.title"
+                            [postContent]="post.content"
+                            [date]="post.date"></app-post-list-item>
+      </ul>
